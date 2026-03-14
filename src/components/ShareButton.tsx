@@ -7,9 +7,9 @@ export default function ShareButton() {
 
     const handleClick = () => {
         if (isToastVisible) {
-            hideToast(); // Wenn sichtbar → verstecken
+            hideToast();
         } else {
-            showToast(); // Wenn versteckt → zeigen
+            showToast();
         }
     };
 

@@ -1,0 +1,14 @@
+.share-button{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    border:none;
+    cursor: pointer;
+    background-color: var(--color-grey-200);
+    color: var(--color-grey-900);
+
+    &:hover{
+        background-color: var(--color-grey-500);
+        color: var(--color-white);
+    }
+}

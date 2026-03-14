@@ -1,10 +1,20 @@
 import './ShareButton.css';
+import { useToastVisible } from "./context/ToastContext";
+
 
 export default function ShareButton() {
+    const { isToastVisible, showToast, hideToast } = useToastVisible();
 
+    const handleClick = () => {
+        if (isToastVisible) {
+            hideToast(); // Wenn sichtbar → verstecken
+        } else {
+            showToast(); // Wenn versteckt → zeigen
+        }
+    };
 
     return (
-        <button className="share-button">
+        <button className="share-button" onClick={handleClick}>
             <svg width="15" height="13" viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M15 6.48112L8.76629 0V3.86675H7.44095C3.33138 3.86675 0 7.02539 0 10.9219V12.971L0.588684 12.3594C2.59014 10.2802 5.4221 9.09549 8.39115 9.09549H8.76629V12.9622L15 6.48112Z"

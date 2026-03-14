@@ -2,13 +2,13 @@ import './css/style.css'
 import ShareButton from "./components/ShareButton.tsx";
 import ProfileAndDate from "./components/ProfileAndDate.tsx";
 import ShareToast from "./components/ShareToast.tsx";
-
+import {ToastProvider} from "./components/context/ToastContext.tsx";
 
 function App() {
 
-
   return (
     <>
+      <ToastProvider>
       <div className="card-container">
         <img src="/images/drawers.jpg" alt="Green Drawers" />
         <div className="card-content">
@@ -22,7 +22,7 @@ function App() {
           <ShareToast></ShareToast>
         </div>
       </div>
-
+      </ToastProvider>
     </>
   )
 }

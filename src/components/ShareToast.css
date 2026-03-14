@@ -1,33 +1,60 @@
-.share-toast-container {
+.share-toast-container{
     width: 100%;
     background-color: var(--color-grey-900);
     padding: 18px 32px;
     position: relative;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-    justify-content: flex-start;
+    display: flex;
     align-items: center;
     gap: 1rem;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+            opacity 0.5s ease,
+            transform 0.5s ease,
+            visibility 0.5s ease;
 }
 
-.share-toast-container.visible {
-    opacity: 1 !important;
-    visibility: visible !important;
+.share-toast-container.visible{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
     transform: translateY(0);
 }
 
-.share-toast-container.hidden {
-    opacity: 0 !important;
-    visibility: hidden !important;
-    transform: translateY(-10px);
+.share-toast-container.hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.share-toast-container > span{
+    text-transform: uppercase;
+}
+
+@media (max-width: 375px) {
+    .share-toast-container{
+        position: absolute;
+        left: -24px;
+        right: -24px;
+        bottom: -24px;
+        width: auto;
+        min-height: 76px;
+        padding: 18px 32px;
+        border-radius: 0 0 0.5rem 0.5rem;
+        z-index: 2;
+    }
+
+    .author-info .share-button {
+        position: relative;
+        z-index: 3;
+    }
 }
 
 @media (min-width: 375px) {
     .share-toast-container {
         width: 15.5rem;
-        height: 3.5rem;
         border-radius: 0.625rem;
     }
 

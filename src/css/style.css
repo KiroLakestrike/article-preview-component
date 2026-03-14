@@ -31,6 +31,7 @@
 .letter-spacing-25 { letter-spacing: 25%; }
 
 .text-color-grey-900 { color: var(--color-grey-900); }
+.text-color-grey-500 { color: var(--color-grey-500); }
 .text-color-grey-400 { color: var(--color-grey-400); }
 
 .manrope-Regular {
@@ -60,10 +61,45 @@
 body {
     background-color: var(--color-grey-200);
 }
+
 .card-container {
-    width: 100%;
-    max-width: 25rem;
+    margin: var(--space-48) var(--space-24);
     background-color: var(--color-white);
     border-radius: 0.5rem;
+    filter: drop-shadow(6px 6px 4px rgba(0, 0, 0, 0.25));
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.card-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem 0.5rem 0 0;
+    object-fit: cover;
+}
+
+.card-content {
     padding: var(--space-24);
+}
+
+.card-container h1 {
+    margin: 0 0 var(--space-16) 0;
+}
+
+.card-container h1 + p {
+    margin: 0 0 var(--space-24) 0;
+    width: 100%;
+}
+
+.share-section {
+    position: relative;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1rem;
 }

@@ -18,9 +18,11 @@ function App() {
                             <div className="share-section">
                                 <div className="author-info">
                                     <ProfileAndDate image={"/images/avatar-michelle.jpg"} name={"Michelle Appleton"} date={"28 Jun 2020"} />
-                                    <ShareButton />
+                                    <div className="share-anchor">
+                                        <ShareButton />
+                                        <ShareToast />
+                                    </div>
                                 </div>
-                                <ShareToast />
                             </div>
                         </div>
                     </div>
@@ -29,5 +31,4 @@ function App() {
         </>
     )
 }
-
 export default App

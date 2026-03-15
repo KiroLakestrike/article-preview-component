@@ -127,7 +127,7 @@ main {
         overflow: visible;
     }
 
-    .card-container img {
+    .card-container + img {
         max-width: 14.25rem;
         height: auto;
         border-radius: 0.5rem 0.5rem 0 0;
